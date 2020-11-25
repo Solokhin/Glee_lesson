@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   font-size: 14px;
   line-height: 24px;
-  // @extend %dmsans-400;
+  @extend %rubik-400;
   background-color: #fff;
 }
 
@@ -22,6 +22,7 @@ body {
   padding: 0 10px;
 }
 
+// разобраться с заменой тега
 a {
   font-size: 15px;
   line-height: 12px;

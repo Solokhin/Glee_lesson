@@ -2,7 +2,6 @@ $head-color: #436372;
 $footer-color: #7b7b7b;
 $title: #1f2044;
 
-
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -18,7 +17,22 @@ $title: #1f2044;
   font-weight: 400;
 }
 
+%dmsans-500 {
+  font-family: 'DMSans', sans-serif;
+  font-weight: 500;
+}
+
 %dmsans-700 {
   font-family: 'DMSans', sans-serif;
   font-weight: 700;
+}
+
+%btn {
+  font-size: 16px;
+  line-height: 18px;
+  @extend %dmsans-700;
+  border: none;
+  background-color: transparent;
+  color: #8b8b8b;
+  cursor: pointer;
 }

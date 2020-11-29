@@ -6,21 +6,11 @@
 
 
 .logo {
-  width: 170px;
+  width: 180px;
   height: 40px;
   display: flex;
   align-items: center;
-  margin-right: 200px;
-
-  &__img {
-    margin-right: 12px;
-  }
-
-  &__name {
-    font-size: 36px;
-    line-height: 58px;
-    color: $head-color;
-  }
+  margin-right: 116px;
 }
 
 .header {
@@ -39,10 +29,9 @@
   }
 
   &__item {
-    margin-right: 33px;
+    margin-right: 36px;
 
     &+& {
-      margin-right: 33px;
 
       &:last-child {
         margin-right: 0;
@@ -62,8 +51,8 @@
   display: flex;
 
   &__link {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
     border: 1px solid #edf1f4;
     border-radius: 50%;
     background-color: #edf1f4;
@@ -128,7 +117,7 @@
       }
     }
 
-    &-num {
+    &--num {
       position: absolute;
       width: 16px;
       height: 16px;
@@ -156,8 +145,6 @@
 
 .footer {
   color: $footer-color;
-  width: 1170px;
-  margin: 0 auto;
 }
 
 .footer-top {
@@ -180,16 +167,13 @@
     margin-bottom: 30px;
   }
 
-  // разобраться что прописать
-  &__address,
-  &__email,
-  &__phone {
+  &__address {
     display: block;
     margin-bottom: 19px;
     font-style: normal;
   }
 
-  &__address {
+  &__address-desc {
     margin-bottom: 23px;
     line-height: 24px;
   }
@@ -247,8 +231,6 @@
     @extend %dmsans-400;
     cursor: pointer;
   }
-
-
 }
 
 .footer-bottom {
@@ -285,7 +267,6 @@
   }
 }
 
-
 .slider {
 
   &__inner {
@@ -293,7 +274,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    min-height: 820px;
+    min-height: 822px;
   }
 
   &__item {
@@ -307,7 +288,7 @@
   }
 
   &__item-content {
-    margin-right: 30px;
+    margin-right: 60px;
   }
 
 
@@ -317,7 +298,8 @@
     line-height: 70px;
     color: #243f4d;
     @extend %rubik-500;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
   }
 
   &__item-subtitle {
@@ -326,36 +308,16 @@
     line-height: 30px;
     color: $head-color;
     @extend %rubik-400;
-    margin-bottom: 40px;
-  }
-
-  &__item-link {
-    width: 200px;
-    padding: 24px 18px 24px 27px;
-    color: #fff;
-    background-color: #a3bbc8;
-    @extend %rubik-500;
-    display: block;
-    position: relative;
-    padding-right: 40px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('../images/slider/right.png');
-      width: 22px;
-      height: 9px;
-      right: 20px;
-    }
+    margin-bottom: 36px;
   }
 
   .slick-dots {
     display: flex;
     justify-content: center;
-    margin-top: -98px;
+    margin-top: -72px;
 
     li+li {
-      margin-left: 14px;
+      margin-left: 12px;
     }
 
     li {
@@ -369,8 +331,6 @@
         color: #667983;
         width: 30px;
         height: 30px;
-        background-color: #fde3cc;
-        border-radius: 50%;
         border: 1px solid #fde3cc;
         border-radius: 50%;
         cursor: pointer;
@@ -396,7 +356,7 @@
 
   &__item {
     width: 33.33%;
-    padding: 46px 10px 46px 224px;
+    padding: 34px 10px 34px 224px;
     display: flex;
     flex-direction: column;
     border-right: 1px solid #e8e4df;
@@ -413,8 +373,8 @@
       position: absolute;
       width: 55px;
       height: 80px;
-      top: 46px;
-      left: 146px;
+      top: 34px;
+      left: 144px;
     }
 
     &--support {
@@ -458,6 +418,114 @@
     line-height: 30px;
     @extend %dmsans-400;
     color: #414141;
+  }
+}
+
+.product {
+  padding: 70px 0 80px;
+  text-align: center;
+
+  &__btn:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__btn {
+    @extend %btn;
+  }
+
+  .mixitup-control-active {
+    color: #1a1a1a;
+  }
+
+  &__filter {
+    margin-bottom: 74px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 30px;
+  }
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+
+  &__images {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    height: 190px;
+    object-fit: contain;
+  }
+
+  &__img-box {
+    position: relative;
+    max-width: 270px;
+    height: 370px;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    padding: 30px 20px;
+    overflow: hidden;
+
+    &:hover {
+      .product-item__link-box {
+        transform: translateY(-10%);
+      }
+    }
+  }
+
+  &__link-box {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(450%);
+    transition: all .3s;
+  }
+
+  &__link {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+  }
+
+  &__link:hover {
+    background-color: #a3bac7;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 15px;
+  }
+
+
+  &__title {
+    font-size: 16px;
+    line-height: 40px;
+    @extend %dmsans-500;
+    color: #243f4d;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 20px;
+    @extend %dmsans-700;
+    color: #a3bbc8;
   }
 }
 

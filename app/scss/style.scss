@@ -529,6 +529,149 @@
   }
 }
 
+.view {
+  padding: 104px 0 60px;
+}
+
+.view-item {
+  display: flex;
+  justify-content: space-between;
+
+  &__block {
+    width: 870px;
+    height: 390px;
+    background-color: #feefe2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__images {
+    margin-right: 30px;
+    transform: translateY(-90px);
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 32px;
+    color: #243f4d;
+    margin-bottom: 28px;
+  }
+
+  &__descr {
+    width: 330px;
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #243f4d;
+    margin-bottom: 34px;
+  }
+
+  &__link {
+    width: 180px;
+    color: #436372;
+    background-color: transparent;
+    border: 1px solid #436372;
+    border-radius: 5px;
+
+    &::after {
+      background: url('../images/right-view.png');
+    }
+  }
+}
+
+
+
+.design {
+  padding: 44px 0 60px;
+  text-align: center;
+
+  &__btn:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__btn {
+    @extend %btn;
+
+    &:active {
+      color: #1a1a1a;
+    }
+
+    &:focus {
+      color: #1a1a1a;
+    }
+  }
+
+  &__list {
+    margin-bottom: 74px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px 30px;
+  }
+}
+
+.design-item {
+  display: flex;
+  flex-direction: column;
+
+  &__block {
+    max-width: 370px;
+    height: 244px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    position: relative;
+    text-align: left;
+  }
+
+  &__box {
+    position: absolute;
+    top: 42px;
+    left: 38px;
+  }
+
+  &__title,
+  &__subtitle {
+    font-size: 20px;
+    line-height: 20px;
+    @extend %dmsans-700;
+    color: #1a1a1a;
+  }
+
+  &__title {
+    margin-bottom: 6px;
+  }
+
+  &__subtitle {
+    margin-bottom: 18px;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 18px;
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+}
+
+
+.video {
+  padding: 60px 0 60px;
+
+  &__inner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 
 // media

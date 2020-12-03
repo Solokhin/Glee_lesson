@@ -24,8 +24,6 @@ body {
 
 .container--small {
   max-width: 1170px;
-  margin: 0 auto;
-  padding: 0;
 }
 
 
@@ -39,8 +37,8 @@ body {
 }
 
 .link {
-  font-size: 15px;
-  line-height: 12px;
+  font-size: 14px;
+  line-height: 18px;
   @extend %rubik-400;
   color: $footer-color;
 }
@@ -64,5 +62,29 @@ body {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  &--transparent {
+    width: 180px;
+    color: #436372;
+    background-color: transparent;
+    border: 1px solid #436372;
+    border-radius: 5px;
+
+    &::after {
+      background: url('../images/right-view.png');
+    }
+  }
+}
+
+.filter-btn {
+  @extend %btn;
+
+  &--active {
+    color: #1a1a1a;
+  }
+
+  &:hover {
+    color: #1a1a1a;
   }
 }

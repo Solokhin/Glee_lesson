@@ -1,0 +1,142 @@
+.footer {
+  padding: 79px 0 38px;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #a3bbc8;
+    color: $footer-color;
+    padding-bottom: 76px;
+  }
+}
+
+.footer__item {
+
+  &--contact {
+    width: 200px;
+  }
+
+  &--nav {
+    width: 200px;
+    line-height: 24px;
+  }
+
+  &--form {
+    width: 270px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+}
+
+.footer {
+
+  &__address {
+    display: block;
+    margin-bottom: 19px;
+    font-style: normal;
+  }
+
+
+  &__list-item {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list-link {
+    display: block;
+  }
+}
+
+
+.footer__title {
+  @extend %dmsans-700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1f2044;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.footer__subtitle {
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 36px;
+  color: #7b7b7b;
+}
+
+.footer__form {
+  display: flex;
+}
+
+.footer__input {
+  width: 170px;
+  height: 38px;
+  padding: 14px 16px;
+  border: none;
+  background-color: #fef7f0;
+  color: #234969;
+  font-size: 12px;
+  @extend %dmsans-400;
+
+  &::placeholder {
+    @extend %dmsans-400;
+    color: #234969;
+  }
+}
+
+.footer__btn {
+  width: 100px;
+  height: 38px;
+  padding: 8px;
+  border: none;
+  background-color: #a3bbc8;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  @extend %dmsans-400;
+  cursor: pointer;
+}
+
+.footer__copy {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $footer-color;
+
+  &-text {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 32px;
+  }
+
+  &-list {
+    display: flex;
+  }
+
+  &-item {
+    &+& {
+      padding-left: 14px;
+      margin-left: 14px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-left: 1px solid $footer-color;
+        width: 2px;
+        height: 17px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

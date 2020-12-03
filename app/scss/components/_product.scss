@@ -1,0 +1,158 @@
+.product {
+  padding: 70px 0 80px;
+  text-align: center;
+
+  &__btn:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  .mixitup-control-active {
+    color: #1a1a1a;
+  }
+
+  &__filter {
+    margin-bottom: 74px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 30px;
+  }
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+
+  &__images {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    height: 190px;
+    object-fit: fill;
+  }
+
+  &__img-box {
+    position: relative;
+    max-width: 270px;
+    height: 370px;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    padding: 30px 20px;
+    overflow: hidden;
+
+    &:hover {
+      .product-item__link-box {
+        transform: translateY(-10%);
+      }
+    }
+  }
+
+  &__link-box {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(450%);
+    transition: transform .3s;
+  }
+
+  &__link {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #a3bac7;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 40px;
+    @extend %dmsans-500;
+    color: #243f4d;
+    display: block;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 20px;
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+}
+
+.special-product {
+  padding: 120px 0 60px;
+}
+
+.special-product__item {
+  display: flex;
+  justify-content: space-between;
+
+  &-block {
+    width: 870px;
+    height: 390px;
+    background-color: #feefe2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-images {
+    margin-right: 30px;
+    transform: translateY(-90px);
+  }
+
+  &-title {
+    width: 270px;
+    height: 54px;
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 32px;
+    color: #243f4d;
+    margin-bottom: 22px;
+  }
+
+  &-descr {
+    width: 330px;
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #243f4d;
+    margin-bottom: 30px;
+  }
+
+
+  &-link--transparent {
+    width: 180px;
+    color: #436372;
+    background-color: transparent;
+    border: 1px solid #436372;
+    border-radius: 5px;
+
+    &::after {
+      background: url('../images/right-view.png');
+    }
+  }
+}

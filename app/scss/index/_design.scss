@@ -49,10 +49,12 @@
   }
 
   &__subtitle {
+    display: block;
     margin-bottom: 18px;
   }
 
   &__descr {
+    display: block;
     font-size: 16px;
     line-height: 18px;
     @extend %dmsans-700;

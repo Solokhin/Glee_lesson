@@ -34,6 +34,15 @@ body {
   color: #191919;
   text-align: center;
   margin-bottom: 28px;
+
+  &__page {
+    font-size: 36px;
+    line-height: 24px;
+    @extend %rubik-400;
+    color: #222933;
+    text-align: center;
+    margin-bottom: 14px;
+  }
 }
 
 .link {
@@ -86,5 +95,42 @@ body {
 
   &:hover {
     color: #1a1a1a;
+  }
+}
+
+.breadcrumbs {
+  padding: 34px 0 34px;
+  background-color: #edf1f4;
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    padding-right: 22px;
+    color: #737980;
+
+    &::after {
+      content: '/';
+      position: absolute;
+      left: 46px;
+      color: inherit;
+    }
+
+    &:last-child {
+      color: #fbc08b;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
   }
 }

@@ -106,6 +106,7 @@ body {
 
   &__list {
     display: flex;
+    justify-content: center;
   }
 
   &__item {
@@ -116,8 +117,17 @@ body {
     &::after {
       content: '/';
       position: absolute;
-      left: 46px;
+      right: 7px;
       color: inherit;
+    }
+
+    &:last-child {
+      color: #fbc08b;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
     }
 
     &:last-child {
@@ -132,5 +142,18 @@ body {
 
   &__link {
     color: inherit;
+  }
+}
+
+.page {
+  padding: 80px 0 90px;
+  background-color: #fef7f0;
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1170px;
+    margin: 0 auto;
   }
 }

@@ -1,0 +1,42 @@
+.page-404 {
+  padding: 120px 0 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 400px;
+    margin-right: 60px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 40px;
+    @extend %dmsans-700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: $head-color;
+  }
+
+  &__text {
+    color: $page-text;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    display: block;
+    width: 200px;
+    padding: 16px 30px;
+    background-color: $page-link;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    line-height: 24px;
+    @extend %rubik-500;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

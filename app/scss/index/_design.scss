@@ -6,6 +6,10 @@
     margin-right: 16px;
   }
 
+  .mixitup-control-active {
+    color: #1a1a1a;
+  }
+
   &__list {
     margin-bottom: 74px;
   }
@@ -59,5 +63,7 @@
     line-height: 18px;
     @extend %dmsans-700;
     color: #a3bbc8;
+
+    // @media () {}
   }
 }

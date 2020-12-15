@@ -1,6 +1,9 @@
 $head-color: #436372;
 $footer-color: #7b7b7b;
 $title: #1f2044;
+$page-text: #436372;
+$page-link: #a3bbc8;
+$filter: #243f4d;
 
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
@@ -35,4 +38,12 @@ $title: #1f2044;
   background-color: transparent;
   color: #8b8b8b;
   cursor: pointer;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }

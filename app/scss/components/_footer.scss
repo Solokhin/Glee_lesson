@@ -53,16 +53,18 @@
     text-transform: uppercase;
   }
 
-  &__subtitle {
+  &__label {
     @extend %rubik-400;
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 36px;
     color: #7b7b7b;
+    display: block;
   }
 
   &__form {
     display: flex;
+    margin-bottom: 24px;
   }
 
   &__input {

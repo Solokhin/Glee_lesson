@@ -3,18 +3,16 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
+
 @import 'components/header';
 @import 'components/slider';
-@import 'index/features';
 @import 'components/product';
-@import 'index/design';
 @import 'components/video';
 @import 'components/blog';
 @import 'components/footer';
 @import 'components/login';
 @import 'components/page-404';
+@import 'components/shop';
 
-
-
-// media
-@import 'media';
+@import 'index/features';
+@import 'index/design';
